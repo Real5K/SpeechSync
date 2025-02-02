@@ -11,16 +11,47 @@
 🔹 **Deep Learning-Powered Accuracy:** Utilizes state-of-the-art models trained on diverse datasets to ensure high transcription accuracy.  
 🔹 **Noise Robustness & Customization:** Handles different levels of background noise and allows fine-tuning for domain-specific terminology.  
 
-## 📂 What's Inside?
+## 📂 Workflow & Components
 
-This notebook is structured into several core sections:
+This notebook follows a structured workflow to ensure high-quality transcription and synchronization:
 
-1. **Data Preparation:** Loading and pre-processing audio files by normalizing formats, resampling, and enhancing audio clarity.  
-2. **ASR Model Selection & Execution:** Running speech-to-text conversion using models like NVIDIA NeMo and WhisperX with optional fine-tuning.  
-3. **Speaker Identification & Diarization:** Assigning timestamps and labels to different speakers in multi-speaker audio using diarization algorithms.  
-4. **Result Formatting & Exporting:** Saving transcriptions in various formats, including subtitle files, interactive transcripts, and structured JSON outputs.  
-5. **Visualization & Analysis:** Generating insights from transcribed speech data, such as word frequency, speech rate, and sentiment analysis.  
-6. **Error Handling & Optimization:** Implementing strategies to handle audio distortions, misrecognitions, and optimize processing speed.  
+### 1️⃣ Data Ingestion & Pre-Processing
+- Load audio files in various formats (MP3, WAV, FLAC, etc.).
+- Normalize audio (resampling, volume normalization, noise reduction) using Librosa and FFmpeg.
+- Segment long audio files into manageable chunks to improve ASR accuracy.
+
+### 2️⃣ ASR Model Selection & Execution
+- Choose from models like **NVIDIA NeMo** and **WhisperX**.
+- Perform speech-to-text conversion with automatic language detection.
+- Enable optional fine-tuning for domain-specific vocabulary.
+
+### 3️⃣ Speaker Identification & Diarization
+- Apply speaker diarization algorithms to label different speakers.
+- Generate speaker-segmented transcripts with timestamped attribution.
+- Use pre-trained diarization models to handle overlapping speech.
+
+### 4️⃣ Transcription Post-Processing
+- Apply text cleaning (punctuation, casing, and filler word removal).
+- Perform confidence scoring to highlight uncertain transcriptions.
+- Identify and correct common ASR errors using spell-checking techniques.
+
+### 5️⃣ Result Formatting & Exporting
+- Save transcriptions in multiple formats:
+  - **SRT** for subtitle applications.
+  - **JSON** for structured storage and further processing.
+  - **TXT** for readability and manual review.
+- Ensure compatibility with video editing and accessibility tools.
+
+### 6️⃣ Visualization & Analysis
+- Generate visual insights like:
+  - Word frequency analysis.
+  - Speaker activity over time.
+  - Speech rate and sentiment trends.
+
+### 7️⃣ Error Handling & Optimization
+- Implement noise filtering and silence detection.
+- Optimize processing speed using batch inference techniques.
+- Log errors and warnings for better debugging and iterative improvements.
 
 ## 🎯 Applications
 
