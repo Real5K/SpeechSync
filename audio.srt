@@ -1,0 +1,400 @@
+﻿1
+00:00:01,660 --> 00:00:06,374
+Speaker 1: You were a proponent of deep learning before it gained widespread acceptance.
+
+2
+00:00:07,595 --> 00:00:10,379
+Speaker 1: What did you see in this field that gave you confidence?
+
+3
+00:00:10,399 --> 00:00:16,967
+Speaker 1: What was your thinking process like in that first decade of the, I don't know what that's called, two thousands, the aughts?
+
+4
+00:00:17,948 --> 00:00:20,712
+Speaker 0: Yeah, I can tell you the thing we got wrong and the thing we got right.
+
+5
+00:00:21,112 --> 00:00:27,540
+Speaker 0: The thing we really got wrong was the importance of, the early importance of unsupervised learning.
+
+6
+00:00:27,520 --> 00:00:33,910
+Speaker 0: So early days of Google Brain, we put a lot of effort into unsupervised learning rather than supervised learning.
+
+7
+00:00:34,531 --> 00:00:42,504
+Speaker 0: And there was this argument, I think it was around, um, two thousand and five after, you know, NeurIPS at that time called NIPS, but now NeurIPS had ended.
+
+8
+00:00:43,226 --> 00:00:48,955
+Speaker 0: And Geoff Hinton and I were sitting in the cafeteria outside, you know, the conference, we had lunch, we were just chatting.
+
+9
+00:00:48,935 --> 00:00:50,257
+Speaker 0: And Jeff pulled up this napkin.
+
+10
+00:00:50,297 --> 00:00:52,721
+Speaker 0: He started sketching this argument on a napkin.
+
+11
+00:00:52,901 --> 00:00:53,843
+Speaker 0: It was very compelling.
+
+12
+00:00:53,863 --> 00:00:54,764
+Speaker 0: I'll repeat it.
+
+13
+00:00:56,046 --> 00:00:58,290
+Speaker 0: Human brain has about a hundred trillion.
+
+14
+00:00:58,350 --> 00:01:00,754
+Speaker 0: So there's ten to the fourteen synaptic connections.
+
+15
+00:01:01,996 --> 00:01:04,801
+Speaker 0: You will live for about ten to nine seconds.
+
+16
+00:01:05,361 --> 00:01:06,143
+Speaker 0: That's thirty years.
+
+17
+00:01:06,203 --> 00:01:09,989
+Speaker 0: You actually live for two by ten to nine, maybe three by ten to nine seconds.
+
+18
+00:01:10,049 --> 00:01:11,972
+Speaker 0: So just let's say ten to nine.
+
+19
+00:01:11,952 --> 00:01:25,195
+Speaker 0: So if each synaptic connection, each weight in your brain's neural network has just a one-bit parameter, that's ten to the fourteen bits you need to learn in up to ten to nine seconds of your life.
+
+20
+00:01:26,076 --> 00:01:33,589
+Speaker 0: So via this simple argument, which is a lot of problems, it's very simplified, that's ten to the five bits per second you need to learn in your life.
+
+21
+00:01:33,569 --> 00:01:35,651
+Speaker 0: And I have a one-year-old daughter.
+
+22
+00:01:35,671 --> 00:01:42,118
+Speaker 0: I am not pointing out ten to five bits per second of labels to her.
+
+23
+00:01:43,319 --> 00:01:49,104
+Speaker 0: And I think I'm a very loving parent, but I'm just not going to do that.
+
+24
+00:01:49,124 --> 00:01:56,932
+Speaker 0: So from this very crude, definitely problematic argument, there's just no way that most of what we know is through supervised learning.
+
+25
+00:01:57,633 --> 00:02:02,698
+Speaker 0: The way you get so many bits of information is from sucking in images, audio, just experiences in the world.
+
+26
+00:02:02,678 --> 00:02:12,030
+Speaker 0: And so that argument, and there are a lot of known forces argument we should go into, really convinced me that there's a lot of power to unsupervised learning.
+
+27
+00:02:13,713 --> 00:02:16,596
+Speaker 0: So that was the part that we actually maybe got wrong.
+
+28
+00:02:16,696 --> 00:02:24,967
+Speaker 0: I still think unsupervised learning is really important, but in the early days, you know, ten, fifteen years ago, a lot of us thought that was the path forward.
+
+29
+00:02:25,488 --> 00:02:29,613
+Speaker 1: Oh, so you're saying that that perhaps was the wrong intuition for the time.
+
+30
+00:02:29,834 --> 00:02:30,294
+Speaker 0: For the time.
+
+31
+00:02:30,354 --> 00:02:32,297
+Speaker 0: That was the part we got wrong.
+
+32
+00:02:32,682 --> 00:02:35,829
+Speaker 0: The part we got right was the importance of scale.
+
+33
+00:02:35,849 --> 00:02:41,261
+Speaker 0: So Adam Coates, another wonderful person, fortunate to have worked with him.
+
+34
+00:02:42,343 --> 00:02:51,703
+Speaker 0: He was in my group at Stanford at the time, and Adam had run these experiments at Stanford showing that the bigger we train a learning algorithm, the better its performance.
+
+35
+00:02:51,683 --> 00:02:59,911
+Speaker 0: And it was based on that, there was a graph that Adam generated, you know, where the X axis, Y axis, lines going up into the right.
+
+36
+00:02:59,931 --> 00:03:03,935
+Speaker 0: So the bigger you make this thing, the better performance accuracy is the vertical axis.
+
+37
+00:03:04,556 --> 00:03:15,567
+Speaker 0: So it's really based on that chart that Adam generated that it gave me the conviction that we could scale these models way bigger than what we could on a few CPUs, which is what we had at Stanford, that we could get even better results.
+
+38
+00:03:15,787 --> 00:03:28,207
+Speaker 0: And it was really based on that one figure that Adam generated that gave me the conviction to go with Sebastian Thrun to pitch, starting a project at Google, which became the Google Brain Project.
+
+39
+00:03:28,227 --> 00:03:29,810
+Speaker 1: Google Brain, you can find Google Brain.
+
+40
+00:03:29,950 --> 00:03:39,527
+Speaker 1: And there the intuition was, scale will bring performance for the system, so we should chase a larger and larger scale.
+
+41
+00:03:39,507 --> 00:03:44,154
+Speaker 1: And I think people don't realize how groundbreaking of it.
+
+42
+00:03:44,314 --> 00:03:49,803
+Speaker 1: It's simple, but it's a groundbreaking idea that bigger data sets will result in better performance.
+
+43
+00:03:50,324 --> 00:03:52,627
+Speaker 0: It was controversial at the time.
+
+44
+00:03:52,908 --> 00:04:05,085
+Speaker 0: Some of my well-meaning friends, senior people in the machine learning community, I won't name, but some of whom we know, So my well-meaning friends came and were trying to give me friendly friends like, hey, Andrew, why are you doing this?
+
+45
+00:04:05,105 --> 00:04:05,646
+Speaker 0: This is crazy.
+
+46
+00:04:06,066 --> 00:04:07,328
+Speaker 0: It's in the neural network architecture.
+
+47
+00:04:07,368 --> 00:04:08,649
+Speaker 0: Look at these architectures of building.
+
+48
+00:04:09,030 --> 00:04:10,111
+Speaker 0: You just want to go for scale?
+
+49
+00:04:10,151 --> 00:04:11,553
+Speaker 0: This is a bad career move.
+
+50
+00:04:11,593 --> 00:04:16,358
+Speaker 0: So my well-meaning friends, some of them were trying to talk me out of it.
+
+51
+00:04:18,221 --> 00:04:26,592
+Speaker 0: But I find that if you want to make a breakthrough, you sometimes have to have conviction and do something before it's popular, since that lets you have a bigger impact.
+
+52
+00:04:27,027 --> 00:04:29,631
+Speaker 1: Let me ask you just in a small tangent on that topic.
+
+53
+00:04:30,272 --> 00:04:46,757
+Speaker 1: I find myself arguing with people saying that greater scale, especially in the context of active learning, so very carefully selecting the data set, but growing the scale of the data set is going to lead to even further breakthroughs in deep learning.
+
+54
+00:04:46,737 --> 00:04:55,773
+Speaker 1: And there's currently pushback at that idea that larger data sets are no longer, so you wanna increase the efficiency of learning.
+
+55
+00:04:56,034 --> 00:04:57,737
+Speaker 1: You wanna make better learning mechanisms.
+
+56
+00:04:58,218 --> 00:05:05,691
+Speaker 1: And I personally believe that just bigger data sets will still, with the same learning methods we have now, will result in better performance.
+
+57
+00:05:05,671 --> 00:05:12,067
+Speaker 1: What's your intuition at this time on this dual side?
+
+58
+00:05:12,107 --> 00:05:21,250
+Speaker 1: Do we need to come up with better architectures for learning or can we just get bigger, better data sets that will improve performance?
+
+59
+00:05:21,803 --> 00:05:24,890
+Speaker 0: I think both are important and it's also problem dependent.
+
+60
+00:05:25,131 --> 00:05:33,450
+Speaker 0: So for a few data sets, we may be approaching Bayes error rate or approaching or surpassing human level performance.
+
+61
+00:05:33,470 --> 00:05:38,040
+Speaker 0: And then there's that theoretical ceiling that we will never surpass, so Bayes error rate.
+
+62
+00:05:38,020 --> 00:05:44,870
+Speaker 0: But then I think there are plenty of problems where we're still quite far from either human level performance or from Bayes error rate.
+
+63
+00:05:45,211 --> 00:05:53,303
+Speaker 0: And bigger data sets with neural networks without further algorithm innovation will be sufficient to take us further.
+
+64
+00:05:54,666 --> 00:06:04,745
+Speaker 0: But on the flip side, if we look at the recent breakthroughs using transforming networks or language models, it was a combination of novel architecture, but also scale had a lot to do with it.
+
+65
+00:06:04,885 --> 00:06:07,110
+Speaker 0: Look at what happened with GPT-II and BERT.
+
+66
+00:06:07,170 --> 00:06:09,736
+Speaker 0: I think scale was the large part of the story.
+
+67
+00:06:10,498 --> 00:06:24,089
+Speaker 1: Yeah, that's not often talked about is the scale of the data set it was trained on and the quality of the data set because there's So it was like redded threads that had, they were uprated highly.
+
+68
+00:06:24,109 --> 00:06:30,603
+Speaker 1: So there's already some weak supervision on a very large dataset that people don't often talk about, right?
+
+69
+00:06:31,465 --> 00:06:37,637
+Speaker 0: I find that today we have maturing processes to managing code things like Git, right?
+
+70
+00:06:37,657 --> 00:06:38,318
+Speaker 0: Version control.
+
+71
+00:06:38,878 --> 00:06:41,501
+Speaker 0: It took a long time to evolve the good processes.
+
+72
+00:06:41,782 --> 00:06:49,090
+Speaker 0: I remember when my friends and I were emailing each other C++ files in email, you know, but then we had, was it CVS subversion Git?
+
+73
+00:06:49,411 --> 00:06:50,472
+Speaker 0: Maybe something else in the future.
+
+74
+00:06:51,734 --> 00:06:58,822
+Speaker 0: We're very immature in terms of tools of managing data and thinking about the clean data and how to solve very hot, messy data problems.
+
+75
+00:06:59,223 --> 00:07:02,206
+Speaker 0: I think there's a lot of innovation there to be had still.
+
+76
+00:07:03,107 --> 00:07:05,470
+Speaker 1: I love the idea that you were versioning through email.
+
+77
+00:07:06,260 --> 00:07:07,302
+Speaker 0: I'll give you one example.
+
+78
+00:07:08,084 --> 00:07:20,532
+Speaker 0: When we work with manufacturing companies, it's not at all uncommon for there to be multiple labellists that disagree with each other, right?
+
+79
+00:07:20,552 --> 00:07:23,940
+Speaker 0: And so we would do the work in visual inspection.
+
+80
+00:07:24,741 --> 00:07:28,448
+Speaker 0: We will you know, take say a plastic pot and show it to one inspector.
+
+81
+00:07:28,508 --> 00:07:34,838
+Speaker 0: And the inspector, sometimes very opinionated, they'll go, clearly that's a defect, this scratch, unacceptable, gotta reject this pot.
+
+82
+00:07:35,499 --> 00:07:43,472
+Speaker 0: Take the same pot to a different inspector, different, very opinionated, clearly this scratch is small, it's fine, don't throw it away, you're gonna make us yours.
+
+83
+00:07:43,452 --> 00:07:52,883
+Speaker 0: And then sometimes you take the same plastic part, show it to the same inspector in the afternoon, I suppose in the morning, and very often they go in the morning to say, clearly this is okay.
+
+84
+00:07:52,963 --> 00:07:56,567
+Speaker 0: In the afternoon, equally confident, clearly this is a defect.
+
+85
+00:07:56,587 --> 00:08:03,935
+Speaker 0: And so what is an AI team supposed to do if sometimes even one person doesn't agree with himself or herself in the span of a day?
+
+86
+00:08:04,596 --> 00:08:13,206
+Speaker 0: So I think these are the types of very practical, very messy data problems that my teams wrestle with.
+
+87
+00:08:13,186 --> 00:08:22,021
+Speaker 0: In the case of large consumer internet companies, where you have a billion users, you have a lot of data, you don't worry about it, just take the average, it kind of works.
+
+88
+00:08:22,562 --> 00:08:33,861
+Speaker 0: But in the case of other industry settings, we don't have big data, it's just a small data, very small data sets, maybe around a hundred defective parts or a hundred examples of a defect.
+
+89
+00:08:33,841 --> 00:08:42,818
+Speaker 0: If you have only a hundred examples, these little labeling errors, if ten of your hundred labels are wrong, that actually is ten percent of your data set has a big impact.
+
+90
+00:08:42,837 --> 00:08:43,799
+Speaker 0: So how do you clean this up?
+
+91
+00:08:43,839 --> 00:08:44,741
+Speaker 0: What are you supposed to do?
+
+92
+00:08:45,202 --> 00:08:56,102
+Speaker 0: This is an example of the types of things that my teams, this is a landing AI example, are wrestling with to deal with small data, which comes up all the time once you're outside consumer internet.
+
+93
+00:08:56,302 --> 00:08:57,224
+Speaker 1: Yeah, that's fascinating.
+
+94
+00:08:57,244 --> 00:09:01,857
+Speaker 1: So then you invest more effort and time in thinking about the actual labeling process.
+
+95
+00:09:02,298 --> 00:09:03,320
+Speaker 1: What are the labels?
+
+96
+00:09:03,822 --> 00:09:09,798
+Speaker 1: What are the, how are disagreements resolved and all those kinds of like pragmatic real world problems.
+
+97
+00:09:09,938 --> 00:09:11,121
+Speaker 1: That's a fascinating space.
+
+98
+00:09:11,405 --> 00:09:11,765
+Speaker 0: Yeah.
+
+99
+00:09:11,786 --> 00:09:25,684
+Speaker 0: I find that actually when I'm teaching at Stanford, I increasingly encourage students at Stanford to try to find their own project for the end of term project rather than just downloading someone else's nicely clean data set.
+
+100
+00:09:26,225 --> 00:09:38,121
+Speaker 0: It's actually much harder if you need to go and define your own problem and find your own data set rather than you go to one of the several good websites, very good websites with clean scoped data sets that you could just work on.
+
